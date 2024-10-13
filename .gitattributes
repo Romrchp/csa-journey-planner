@@ -1,0 +1,15 @@
+data/footpaths.csv filter=lfs diff=lfs merge=lfs -text
+data/connections.csv filter=lfs diff=lfs merge=lfs -text
+data/transport_types.csv filter=lfs diff=lfs merge=lfs -text
+figs/EACSA.png filter=lfs diff=lfs merge=lfs -text
+figs/journeys.png filter=lfs diff=lfs merge=lfs -text
+figs/journeys.svg filter=lfs diff=lfs merge=lfs -text
+figs/Outside_the_radius.png filter=lfs diff=lfs merge=lfs -text
+data/delays_stats.csv filter=lfs diff=lfs merge=lfs -text
+data/all_stops.csv filter=lfs diff=lfs merge=lfs -text
+figs/first_validation_route.png filter=lfs diff=lfs merge=lfs -text
+figs/first_validation_sbb.png filter=lfs diff=lfs merge=lfs -text
+figs/scd_validation_params.png filter=lfs diff=lfs merge=lfs -text
+figs/scd_validation_route.png filter=lfs diff=lfs merge=lfs -text
+figs/scd_validation_sbb.png filter=lfs diff=lfs merge=lfs -text
+figs/first_validation.png filter=lfs diff=lfs merge=lfs -text
