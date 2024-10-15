@@ -1,4 +1,4 @@
-# Final Assignment: Robust Journey Planning
+# Journey Planning in Zürich with the Earliest Connection Scan Algorithm
 
 ## Content
 
