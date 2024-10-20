@@ -1,31 +1,8 @@
 # Journey Planning in Zürich with the Earliest Connection Scan Algorithm
 
-## Content
-
-* [HOW-TO](#HOW-TO)
-* [Work Repartition](#Work-Repartition)
-* [Video Presentation](#Video-presentation)
-* [Problem Motivation](#Problem-Motivation)
-* [Problem Description](#Problem-Description)
-* [Dataset Description](#Dataset-Description)
-
-    - [Timetable data](#Timetable-data)
-----
-## HOW-TO
-
-All of the work we made for the project is located in the `notebooks/final-journey-planner.ipynb` Jupyter notebook. However, before lauching this notebook and excecuting
-the cells, a few things need to be taken into account :
-
-- Please run the `git lfs pull` command in a terminal. From explanatory figures to actual datasets used in the project, we stored different things on git lfs and the cells will output errors without using this command before anything. If you opened the notebook before running the `git lfs pull`, please close and re-open it for the different figures to appear. 
-- The important package folium (needed for map visualization) should be in the `requirements.txt` file. However, if it is not imported when installed with the session's launch, please run the `pip install folium` command in an empty notebook or at the beginning of the `notebooks/final-journey-planner.ipynb` for the visualization part to be running properly.
-- It is specified in the notebook, but running a PySpark session and the different PySpark queries (in part 1. and 2. of the notebook) is not needed for our algorithm itself to work. We stored the different datasets needed for it with git lfs and the `git lfs pull` command should be sufficient to run part 3. and onwards from our notebook.
-- The visualization part does not work properly when launching the Notebook on a Renku session. Despite our best efforts, the Notebook is not Trusted and it is impossible to display, as a cell output, the HTML map that we built for user-friendly visualization. For each route (please refer to our notebook for furhter explanations), the trip informations are available in the log part of the notebook.
-
-----
-
 ## Video presentation
 
-Our video presentation, containing a small part about validation and visualization, is available at the following link :
+A video presentation, containing a small part about validation and visualization, is available at the following link :
 https://youtu.be/V4pXFV9UGCs 
 
 ----
@@ -84,26 +61,30 @@ It was assumed that the weekly changes were small, and a timetable for a given w
 
 The full description of the GTFS format is available in the opentransportdata.swiss data [timetable cookbooks](https://opentransportdata.swiss/en/cookbook/gtfs/).
 
+## Repository Structure
 
-## Work repartition
-For this project, the tasks were shared in the following way :
+- 📂 [data](data/) Contains resulting CSV tables from PySpark Queries of the SBB data, i.e Big Data preprocessing work used for the evaluation of our algorithm (Part 1 & 2 of the final notebook)
 
-Romain : 
-- Handled the temporal and spatial preprocessing of the timetables and data in the notebook (Part 2, from 2.1 to 2.4). 
-- Came up with the theoretical CSA adaptation and coded the updated version of the our CSA-based algorithm in the project (Part 3, from 3.3.1 to 3.3.3). 
-- Commented the notebook (all markdown cells + code information, besides part 3.3.3)
-- Helped with visualization
+- 📂 [figs](figs/) Images and figures used throughout our work, mainly for explanations and clarity.
 
-Eric :
- - Helped with the user query, and the journey reconstruction. 
+- 📂 [notebooks](notebooks/) Folder containing the notebook(s) containing the workdone for the project.
+  - 📒 [final-journey_planner.ipynb](notebooks/final-journey_planner.ipynb) Main notebook, contains the entirety of the work done for the project.
 
-Hadi :  
-- Delay dependencies formulation,
-- Helped with the Earliest CSA adaptation, 
-- Visualization of the trips
+- 📂 [renku-docker-relics](renku-docker-relics/) Contain relic files from the original implementation of the project, through the Renku platform. As this is a semester project, these files have become obsolete and have to be adapted again.
 
-Mehdi :
-- Co-authored the Delay dependencies formulation, 
-- Coded the part about taking into account the delays (Part 3.3.3), + commented the code of this part
+- 📄 [environment.yml](environment.yml) : File containing the different requirements for [final-journey_planner.ipynb](notebooks/final-journey_planner.ipynb) to run properly.
+
+----
+## HOW-TO
+
+All of the work we made for the project is located in the `notebooks/final-journey-planner.ipynb` Jupyter notebook. However, before lauching this notebook and excecuting
+the cells, a few things need to be taken into account :
+
+- Please run the `git lfs pull` command in a terminal. From explanatory figures to actual datasets used in the project, we stored different things on git lfs and the cells will output errors without using this command before anything. If you opened the notebook before running the `git lfs pull`, please close and re-open it for the different figures to appear. 
+
+- **As specified in the previous section, the Renku platform unfortunately isn't available anymore for this project. Parts 1 and 2 are therefore not going to run properly and are currently present for informative purposes about our approach to the project, but will be made runnable as soon as possible.**
+
+- The important package folium (needed for map visualization) should be in the `requirements.txt` file. However, if it is not imported when installed with the session's launch, please run the `pip install folium` command in an empty notebook or at the beginning of the `notebooks/final-journey-planner.ipynb` for the visualization part to be running properly.
+
 
 ----
