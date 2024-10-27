@@ -88,3 +88,11 @@ the cells, a few things need to be taken into account :
 
 
 ----
+
+## Team Members
+
+- [Eric Ouyang](mailto:eric.ouyang@epfl.ch)
+- [Hadi Hammoud](mailto:hadi.hammoud@epfl.ch) 
+- [Mehdi Sellami](mailto:mehdi.sellami@epfl.ch) 
+- [Romain Rochepeau](mailto:romain.rochepeau@epfl.ch) 
+
